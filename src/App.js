@@ -11,6 +11,9 @@ import {
 
 function Model(props) {
   const { scene, nodes, materials } = useGLTF("/lambo.glb");
+
+  // console.log(materials.WhiteCar);
+
   useLayoutEffect(() => {
     scene.traverse(
       (obj) =>
@@ -19,12 +22,13 @@ function Model(props) {
     Object.assign(nodes.wheel003_020_2_Chrome_0.material, {
       metalness: 0.9,
       roughness: 0.4,
-      color: new THREE.Color("#020202"),
+      color: new THREE.Color("#222"),
     });
     Object.assign(materials.WhiteCar, {
-      roughness: 0.0,
+      roughness: 0,
       metalness: 0.3,
-      emissive: new THREE.Color("#500000"),
+      // emissive: new THREE.Color("#000"),
+      // color: new THREE.Color("#ff0000"),
       envMapIntensity: 0.5,
     });
   }, [scene, nodes, materials]);
@@ -33,16 +37,16 @@ function Model(props) {
 
 export default function App() {
   return (
-    <Canvas dpr={[1, 2]} shadows camera={{ fov: 45 }}>
+    <Canvas shadows camera={{ fov: 37 }}>
       <color attach="background" args={["#000"]} />
-      <fog attach="fog" args={["#000", 10, 20]} />
+      {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
       <Suspense fallback={null}>
-        <Environment path="/cube" />
+        {/* <Environment path="/cube" /> */}
         <PresentationControls
           speed={1.5}
           global
-          zoom={0.7}
-          polar={[-0.1, Math.PI / 4]}
+          // zoom={0.7}
+          // polar={[-0.1, Math.PI / 4]}
         >
           <Stage
             environment={null}
@@ -53,14 +57,14 @@ export default function App() {
             <Model scale={0.01} />
           </Stage>
           <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[170, 170]} />
+            <planeGeometry args={[500, 500]} />
             <MeshReflectorMaterial
-              blur={[300, 100]}
-              resolution={2048}
+              blur={[30, 10]}
+              resolution={777}
               mixBlur={1}
-              mixStrength={40}
-              roughness={1}
-              depthScale={1.2}
+              mixStrength={50}
+              roughness={0.75}
+              depthScale={0}
               minDepthThreshold={0.4}
               maxDepthThreshold={1.4}
               color="#101010"
