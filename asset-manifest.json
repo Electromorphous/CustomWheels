@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/CustomWheels/static/css/main.c23a2b10.chunk.css",
-    "main.js": "/CustomWheels/static/js/main.0dc22885.chunk.js",
-    "main.js.map": "/CustomWheels/static/js/main.0dc22885.chunk.js.map",
+    "main.js": "/CustomWheels/static/js/main.6fc39010.chunk.js",
+    "main.js.map": "/CustomWheels/static/js/main.6fc39010.chunk.js.map",
     "runtime-main.js": "/CustomWheels/static/js/runtime-main.4dea6b78.js",
     "runtime-main.js.map": "/CustomWheels/static/js/runtime-main.4dea6b78.js.map",
     "static/js/2.ec9557d2.chunk.js": "/CustomWheels/static/js/2.ec9557d2.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.4dea6b78.js",
     "static/js/2.ec9557d2.chunk.js",
     "static/css/main.c23a2b10.chunk.css",
-    "static/js/main.0dc22885.chunk.js"
+    "static/js/main.6fc39010.chunk.js"
   ]
 }
