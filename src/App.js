@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { Suspense, useLayoutEffect } from "react";
+import { Suspense, useLayoutEffect, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   useGLTF,
@@ -25,10 +25,10 @@ function Model(props) {
       color: new THREE.Color("#222"),
     });
     Object.assign(materials.WhiteCar, {
-      roughness: 0,
-      metalness: 0.3,
-      // emissive: new THREE.Color("#000"),
-      // color: new THREE.Color("#ff0000"),
+      roughness: 1,
+      metalness: 0.5,
+      // emissive: new THREE.Color("#000000"),
+      color: new THREE.Color("#ab4700"),
       envMapIntensity: 0.5,
     });
   }, [scene, nodes, materials]);
@@ -36,32 +36,51 @@ function Model(props) {
 }
 
 export default function App() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  console.log(offset);
+
   return (
-    <Canvas shadows camera={{ fov: 37 }}>
+    <Canvas
+      shadows
+      camera={{ fov: 31 }}
+      resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
+    >
       <color attach="background" args={["#000"]} />
       {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
       <Suspense fallback={null}>
         {/* <Environment path="/cube" /> */}
         <PresentationControls
-          speed={1.5}
+          speed={1.7}
           global
-          // zoom={0.7}
-          // polar={[-0.1, Math.PI / 4]}
+          zoom={0.95}
+          rotation={[-Math.PI / 69, -Math.PI / 5, 0]}
+          polar={[0, Math.PI / 3]}
         >
           <Stage
             environment={null}
-            intensity={1}
+            intensity={0.75}
             contactShadow={false}
-            shadowBias={-0.0015}
+            shadowBias={-0.015}
           >
             <Model scale={0.01} />
           </Stage>
+
           <mesh rotation={[-Math.PI / 2, 0, 0]}>
             <planeGeometry args={[500, 500]} />
             <MeshReflectorMaterial
-              blur={[30, 10]}
-              resolution={777}
-              mixBlur={1}
+              blur={[30, 20]}
+              resolution={1024}
+              mixBlur={0.7}
               mixStrength={50}
               roughness={0.75}
               depthScale={0}
