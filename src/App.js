@@ -11,7 +11,7 @@ import {
 
 function Model(props) {
   const { scene, nodes, materials } = useGLTF(
-    "https://electromorphous.github.io/GLTF/lambo.glb"
+    "https://electromorphous.github.io/CustomWheels/lambo.glb"
   );
 
   // console.log(materials.WhiteCar);
@@ -60,7 +60,7 @@ export default function App() {
       <color attach="background" args={["#000"]} />
       {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
       <Suspense fallback={null}>
-        {/* <Environment path="/cube" /> */}
+        {/* <Environment path="https://electromorphous.github.io/CustomWheels/Environments/cube" /> */}
         <PresentationControls
           speed={1.7}
           global
