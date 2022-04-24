@@ -22,15 +22,15 @@ function Model(props) {
         obj.type === "Mesh" && (obj.receiveShadow = obj.castShadow = true)
     );
     Object.assign(nodes.wheel003_020_2_Chrome_0.material, {
-      metalness: 0.9,
+      metalness: 0,
       roughness: 0.4,
       color: new THREE.Color("#222"),
     });
     Object.assign(materials.WhiteCar, {
       roughness: 1,
-      metalness: 0.5,
+      metalness: 0,
       // emissive: new THREE.Color("#000000"),
-      color: new THREE.Color("#ab4700"),
+      color: new THREE.Color("#777"),
       envMapIntensity: 0.5,
     });
   }, [scene, nodes, materials]);
@@ -65,8 +65,8 @@ export default function App() {
           speed={1.7}
           global
           zoom={0.95}
-          rotation={[-Math.PI / 69, -Math.PI / 5, 0]}
-          polar={[0, Math.PI / 3]}
+          rotation={[-Math.PI / 47, -Math.PI / 5, 0]}
+          polar={[0, Math.PI / 2.5]}
         >
           <Stage
             environment={null}
@@ -82,14 +82,14 @@ export default function App() {
             <MeshReflectorMaterial
               blur={[30, 20]}
               resolution={1024}
-              mixBlur={0.7}
+              mixBlur={1}
               mixStrength={50}
               roughness={0.75}
               depthScale={0}
               minDepthThreshold={0.4}
               maxDepthThreshold={1.4}
               color="#101010"
-              metalness={0.5}
+              metalness={0}
             />
           </mesh>
         </PresentationControls>
