@@ -10,7 +10,9 @@ import {
 } from "@react-three/drei";
 
 function Model(props) {
-  const { scene, nodes, materials } = useGLTF("/lambo.glb");
+  const { scene, nodes, materials } = useGLTF(
+    "https://electromorphous.github.io/GLTF/lambo.glb"
+  );
 
   // console.log(materials.WhiteCar);
 
