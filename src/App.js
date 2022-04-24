@@ -8,6 +8,7 @@ import {
   Stage,
   PresentationControls,
 } from "@react-three/drei";
+import Loader from "./components/Loader";
 
 function Model(props) {
   const { scene, nodes, materials } = useGLTF(
@@ -52,14 +53,14 @@ export default function App() {
   console.log(offset);
 
   return (
-    <Canvas
-      shadows
-      camera={{ fov: 31 }}
-      resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
-    >
-      <color attach="background" args={["#000"]} />
-      {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
-      <Suspense fallback={null}>
+    <Suspense fallback={<Loader />}>
+      <Canvas
+        shadows
+        camera={{ fov: 31 }}
+        resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
+      >
+        <color attach="background" args={["#000"]} />
+        {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
         {/* <Environment path="https://electromorphous.github.io/CustomWheels/Environments/cube" /> */}
         <PresentationControls
           speed={1.7}
@@ -93,7 +94,7 @@ export default function App() {
             />
           </mesh>
         </PresentationControls>
-      </Suspense>
-    </Canvas>
+      </Canvas>
+    </Suspense>
   );
 }
