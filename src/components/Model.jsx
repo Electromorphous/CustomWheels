@@ -12,8 +12,8 @@ function Model(props) {
 
   useFrame(({ camera }) => {
     // console.log(camera);
-    // camera.zoom = THREE.MathUtils.lerp(camera.zoom, props.zoom, 0.1);
-    // camera.updateProjectionMatrix();
+    camera.zoom = THREE.MathUtils.lerp(camera.zoom, props.zoom, 0.1);
+    camera.updateProjectionMatrix();
   });
 
   useMemo(() => {
