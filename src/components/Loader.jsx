@@ -15,10 +15,10 @@ const loaderStyle = {
 function Loader() {
   return (
     <div style={loaderStyle}>
-      <div class="loader-container arc-rotate-double">
-        <div class="loader">
-          <div class="arc-1"></div>
-          <div class="arc-2"></div>
+      <div className="loader-container arc-rotate-double">
+        <div className="loader">
+          <div className="arc-1"></div>
+          <div className="arc-2"></div>
         </div>
       </div>
     </div>
