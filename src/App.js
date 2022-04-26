@@ -1,4 +1,4 @@
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   MeshReflectorMaterial,
@@ -12,24 +12,24 @@ import Model from "./components/Model";
 export default function App() {
   const [zoom, setZoom] = useState(1);
 
-  const handleWheel = (e) => {
+  const handleScroll = (e) => {
     const interval = 0.2;
 
     if (e.deltaY < 0 && zoom <= 2) {
       setZoom((prev) => prev + interval);
-    } else if (e.deltaY > 0 && zoom >= 0.6) {
+    } else if (e.deltaY > 0 && zoom >= 0.65) {
       setZoom((prev) => prev - interval);
     }
   };
 
   return (
     <Suspense fallback={<Loader />}>
-      <div onWheel={handleWheel} style={{ height: "100vh" }}>
+      <div onWheel={handleScroll} style={{ height: "100vh" }}>
         <Canvas
           style={{ height: "100%" }}
           shadows
           camera={{ fov: 31 }}
-          // resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
+          resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
         >
           <color attach="background" args={["#000"]} />
           {/* <fog attach="fog" args={["#fff", 10, 200]} /> */}
@@ -50,7 +50,7 @@ export default function App() {
               <Model scale={0.001} zoom={zoom} />
             </Stage>
 
-            <mesh rotation={[-Math.PI / 2, 0, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.001, 0]}>
               <planeGeometry args={[500, 500]} />
               <MeshReflectorMaterial
                 blur={[30, 20]}
