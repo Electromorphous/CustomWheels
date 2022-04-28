@@ -47,7 +47,7 @@ export default function App() {
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.001, 0]}>
           <planeGeometry args={[500, 500]} />
           <MeshReflectorMaterial
-            blur={[30, 20]}
+            blur={[0, 0]}
             resolution={1024}
             mixBlur={1}
             mixStrength={50}
@@ -55,12 +55,10 @@ export default function App() {
             depthScale={0}
             minDepthThreshold={0.4}
             maxDepthThreshold={1.4}
-            color="#101010"
+            color="#010101"
             metalness={0}
           />
         </mesh>
-
-        {/* <ambientLight args={["#fff", 1]} /> */}
       </Canvas>
     </Suspense>
   );
