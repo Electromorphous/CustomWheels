@@ -8,26 +8,6 @@ function Model(props) {
     "https://electromorphous.github.io/CustomWheels/lambo.glb"
   );
 
-  // const [camPos, setCamPos] = useState([]);
-
-  // const ref = useRef();
-
-  // console.log(materials.WhiteCar);
-
-  useFrame(({ camera }) => {
-    camera.zoom = THREE.MathUtils.lerp(camera.zoom, props.zoom, 0.2);
-
-    camera.updateProjectionMatrix();
-    // setCamPos(camera.position);
-  }, 0);
-
-  // useEffect(() => {
-  //   console.log("cam");
-  //   console.log(camPos);
-  // }, [camPos]);
-
-  // if (ref.current) console.log(ref.current.position);
-
   useLayoutEffect(() => {
     scene.traverse(
       (obj) =>
@@ -35,7 +15,7 @@ function Model(props) {
     );
     Object.assign(nodes.wheel003_020_2_Chrome_0.material, {
       metalness: 0,
-      roughness: 1,
+      roughness: 0.4,
       color: new THREE.Color("#222"),
     });
     Object.assign(materials.WhiteCar, {
