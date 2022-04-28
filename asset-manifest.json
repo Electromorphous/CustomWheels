@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/CustomWheels/static/css/main.d3563f3d.chunk.css",
-    "main.js": "/CustomWheels/static/js/main.f6c70e99.chunk.js",
-    "main.js.map": "/CustomWheels/static/js/main.f6c70e99.chunk.js.map",
+    "main.js": "/CustomWheels/static/js/main.eb3e1057.chunk.js",
+    "main.js.map": "/CustomWheels/static/js/main.eb3e1057.chunk.js.map",
     "runtime-main.js": "/CustomWheels/static/js/runtime-main.4dea6b78.js",
     "runtime-main.js.map": "/CustomWheels/static/js/runtime-main.4dea6b78.js.map",
-    "static/js/2.7625f5d9.chunk.js": "/CustomWheels/static/js/2.7625f5d9.chunk.js",
-    "static/js/2.7625f5d9.chunk.js.map": "/CustomWheels/static/js/2.7625f5d9.chunk.js.map",
+    "static/js/2.237ea67e.chunk.js": "/CustomWheels/static/js/2.237ea67e.chunk.js",
+    "static/js/2.237ea67e.chunk.js.map": "/CustomWheels/static/js/2.237ea67e.chunk.js.map",
     "index.html": "/CustomWheels/index.html",
     "static/css/main.d3563f3d.chunk.css.map": "/CustomWheels/static/css/main.d3563f3d.chunk.css.map",
-    "static/js/2.7625f5d9.chunk.js.LICENSE.txt": "/CustomWheels/static/js/2.7625f5d9.chunk.js.LICENSE.txt"
+    "static/js/2.237ea67e.chunk.js.LICENSE.txt": "/CustomWheels/static/js/2.237ea67e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4dea6b78.js",
-    "static/js/2.7625f5d9.chunk.js",
+    "static/js/2.237ea67e.chunk.js",
     "static/css/main.d3563f3d.chunk.css",
-    "static/js/main.f6c70e99.chunk.js"
+    "static/js/main.eb3e1057.chunk.js"
   ]
 }
