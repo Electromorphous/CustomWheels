@@ -15,7 +15,17 @@ export default function Lambo({ ...props }) {
     "https://electromorphous.github.io/CustomWheels/lambo.glb"
   );
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      // onPointerOver={(e) => {
+      //   console.log(e.object);
+      //   e.object.material.color.set("#cf6e00");
+      // }}
+
+      // onPointerOut={(e) => e.object.material.color.set("white")}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[0, 2.7, -119]}>
