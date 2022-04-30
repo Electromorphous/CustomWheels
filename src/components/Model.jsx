@@ -10,10 +10,10 @@ function Model(props) {
   // );
 
   // useLayoutEffect(() => {
-  //   scene.traverse(
-  //     (obj) =>
-  //       obj.type === "Mesh" && (obj.receiveShadow = obj.castShadow = true)
-  //   );
+  // scene.traverse(
+  //   (obj) =>
+  //     obj.type === "Mesh" && (obj.receiveShadow = obj.castShadow = true)
+  // );
   //   Object.assign(nodes.wheel003_020_2_Chrome_0.material, {
   //     metalness: 0,
   //     roughness: 0.4,
@@ -28,7 +28,7 @@ function Model(props) {
   //   });
   // }, [scene, nodes, materials]);
 
-  // return <primitive object={Lambo} {...props} />;
+  // return <primitive object={scene} {...props} />;
 
   return <Lambo {...props} />;
 }
