@@ -25,7 +25,7 @@ export default function Environment1() {
     <Environment background>
       <mesh scale={100}>
         <sphereGeometry args={[1, 64, 64]} />
-        <meshBasicMaterial side={THREE.BackSide} color="#00ff00" />
+        <meshBasicMaterial side={THREE.BackSide} color="#000" />
       </mesh>
     </Environment>
   );
