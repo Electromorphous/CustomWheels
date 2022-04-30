@@ -30,10 +30,22 @@ function Three() {
         rotateSpeed={0.69}
       />
 
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.2} />
+      {/* top spot light */}
       <spotLight
-        args={["#fff", 1.2, 0, Math.PI / 8, 0.4]}
+        args={["#fff", 0.8, 0, Math.PI / 8, 0.4]}
         position={[0, 1, 0]}
+        castShadow
+      />
+      {/* side lights */}
+      <spotLight
+        args={["#fff", 0.3, 0, Math.PI / 8, 0.4]}
+        position={[5, 0, 0]}
+        castShadow
+      />
+      <spotLight
+        args={["#fff", 0.3, 0, Math.PI / 8, 0.4]}
+        position={[-5, 0, 0]}
         castShadow
       />
 

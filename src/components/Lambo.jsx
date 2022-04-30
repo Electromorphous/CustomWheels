@@ -21,6 +21,7 @@ export default function Lambo({ ...props }) {
       dispose={null}
       // onPointerOver={(e) => {
       //   e.object.material.color.set("#56f725");
+      //   // console.log(e.object);
       // }}
 
       // onPointerOut={(e) => e.object.material.color.set("white")}
@@ -35,7 +36,6 @@ export default function Lambo({ ...props }) {
             >
               <group scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={nodes.Whl_HD_FL_004_3_Universal_Wheel_0.geometry}
                   material={materials.Universal_Wheel}
                 />
@@ -46,7 +46,6 @@ export default function Lambo({ ...props }) {
                 scale={0.65}
               >
                 <mesh
-                  castShadow
                   geometry={
                     nodes.Universal_Caliper_3_Universal_Wheel_0.geometry
                   }
@@ -55,34 +54,29 @@ export default function Lambo({ ...props }) {
               </group>
               <group position={[2.14, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_020_3_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_019_3_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[2.19, -0.31, -0.37]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_018_3_RimsChrome_0.geometry}
                   material={materials.RimsChrome}
                 />
               </group>
               <group position={[2, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_015_3_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
               </group>
               <mesh
-                castShadow
                 geometry={nodes.RR_TiresGum_0.geometry}
                 material={materials.TiresGum}
               />
@@ -90,14 +84,12 @@ export default function Lambo({ ...props }) {
             <group position={[88.64, -40.87, -16.14]} scale={[1.6, 1.51, 1.51]}>
               <group scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={nodes.Whl_HD_FL_004_2_Universal_Wheel_0.geometry}
                   material={materials.Universal_Wheel}
                 />
               </group>
               <group position={[-0.15, 0, -11.18]} scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={
                     nodes.Universal_Caliper_2_Universal_Wheel_0.geometry
                   }
@@ -106,34 +98,29 @@ export default function Lambo({ ...props }) {
               </group>
               <group position={[2.14, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_020_2_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_019_2_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[2.19, -0.31, -0.37]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_018_2_RimsChrome_0.geometry}
                   material={materials.RimsChrome}
                 />
               </group>
               <group position={[2, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_015_2_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
               </group>
               <mesh
-                castShadow
                 geometry={nodes.RL_TiresGum_0.geometry}
                 material={materials.TiresGum}
               />
@@ -145,14 +132,12 @@ export default function Lambo({ ...props }) {
             >
               <group scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={nodes.Whl_HD_FL_004_1_Universal_Wheel_0.geometry}
                   material={materials.Universal_Wheel}
                 />
               </group>
               <group position={[-0.15, 0, -11.18]} scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={
                     nodes.Universal_Caliper_1_Universal_Wheel_0.geometry
                   }
@@ -161,34 +146,29 @@ export default function Lambo({ ...props }) {
               </group>
               <group position={[2.14, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_020_1_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_019_1_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[2.19, -0.31, -0.36]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_018_1_RimsChrome_0.geometry}
                   material={materials.RimsChrome}
                 />
               </group>
               <group position={[2, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_015_1_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
               </group>
               <mesh
-                castShadow
                 geometry={nodes.FR_TiresGum_0.geometry}
                 material={materials.TiresGum}
               />
@@ -196,7 +176,6 @@ export default function Lambo({ ...props }) {
             <group position={[88.64, -40.87, 274.96]} scale={1.51}>
               <group scale={0.65}>
                 <mesh
-                  castShadow
                   geometry={nodes.Whl_HD_FL_004_Universal_Wheel_0.geometry}
                   material={materials.Universal_Wheel}
                 />
@@ -207,41 +186,35 @@ export default function Lambo({ ...props }) {
                 scale={0.65}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.Universal_Caliper_Universal_Wheel_0.geometry}
                   material={materials.Universal_Wheel}
                 />
               </group>
               <group position={[2.14, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_020_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_019_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
               </group>
               <group position={[2.19, -0.31, -0.37]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_018_RimsChrome_0.geometry}
                   material={materials.RimsChrome}
                 />
               </group>
               <group position={[2, 0, 0]}>
                 <mesh
-                  castShadow
                   geometry={nodes.wheel003_015_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
               </group>
               <mesh
-                castShadow
                 geometry={nodes.FL_TiresGum_0.geometry}
                 material={materials.TiresGum}
               />
@@ -264,7 +237,6 @@ export default function Lambo({ ...props }) {
                   material={materials.WhiteCar}
                 />
                 <mesh
-                  castShadow
                   geometry={nodes.yellow_Logo_0.geometry}
                   material={materials.Logo}
                 />
@@ -275,7 +247,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.silver_003_BreaksRedPaint_0.geometry}
                   material={materials.BreaksRedPaint}
                 />
@@ -286,7 +257,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.silver_002_ChromeBLurred_0.geometry}
                   material={materials.ChromeBLurred}
                 />
@@ -297,7 +267,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.silver_001_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
@@ -308,7 +277,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.silver_ChromeBLurred_0.geometry}
                   material={materials.ChromeBLurred}
                 />
@@ -319,7 +287,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.matt_black_001_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -341,7 +308,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_050_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -352,7 +318,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_049_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -363,7 +328,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_046_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -374,7 +338,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_045_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -385,7 +348,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_044_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -396,7 +358,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_043_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -407,7 +368,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_042_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -418,7 +378,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_040_Chrome_0.geometry}
                   material={materials.Chrome}
                 />
@@ -429,7 +388,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_033_Default_Material_0.geometry}
                   material={materials.Default_Material}
                 />
@@ -440,7 +398,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_027_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -451,7 +408,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_024_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -462,7 +418,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_022_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
@@ -473,7 +428,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_021_emitbrake_0.geometry}
                   material={materials.emitbrake}
                 />
@@ -484,7 +438,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_019_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -495,7 +448,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_018_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -506,7 +458,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_015_Hub_0.geometry}
                   material={materials.material}
                 />
@@ -517,7 +468,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_009_LightsFrontLed_0.geometry}
                   material={materials.LightsFrontLed}
                 />
@@ -528,7 +478,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_008_BreakDiscs_1_0.geometry}
                   material={materials.BreakDiscs_1}
                 />
@@ -539,7 +488,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_007_Default_Material_0.geometry}
                   material={materials.Default_Material}
                 />
@@ -550,7 +498,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_002_BreakDiscs_0.geometry}
                   material={materials.BreakDiscs}
                 />
@@ -561,7 +508,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.lights_Hub_0.geometry}
                   material={materials.material}
                 />
@@ -577,7 +523,6 @@ export default function Lambo({ ...props }) {
                   material={materials.RimsChrome}
                 />
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_008_Mirror_0.geometry}
                   material={materials.Mirror}
                 />
@@ -588,7 +533,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_007_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -599,7 +543,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_006_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -610,7 +553,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_005_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -621,7 +563,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_004_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -632,7 +573,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_003_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -643,7 +583,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_002_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -654,7 +593,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_001_BlackPaint_0.geometry}
                   material={materials.BlackPaint}
                 />
@@ -665,7 +603,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.gloss_black_GreyElements_0.geometry}
                   material={materials.GreyElements}
                 />
@@ -676,7 +613,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.glass_005_LightsGlassBack_0.geometry}
                   material={materials.LightsGlassBack}
                 />
@@ -687,7 +623,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.glass_004_LightsGlassFront_0.geometry}
                   material={materials.LightsGlassFront}
                 />
@@ -698,7 +633,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.glass_003_Glass_0.geometry}
                   material={materials.Glass}
                 />
@@ -709,7 +643,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.glass_002_LightsGlassFront_0.geometry}
                   material={materials.LightsGlassFront}
                 />
@@ -720,7 +653,6 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  castShadow
                   geometry={nodes.glass_001_LightsGlassFront_0.geometry}
                   material={materials.LightsGlassFront}
                 />
