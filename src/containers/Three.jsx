@@ -1,6 +1,6 @@
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { OrbitControls, ContactShadows, SpotLight } from "@react-three/drei";
+// import { useState, useEffect, useLayoutEffect, useRef } from "react";
+// import { useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import Model from "../components/Model";
 import Environment1 from "./Environment1";
 
@@ -33,7 +33,7 @@ function Three() {
       <ambientLight intensity={0.2} />
       {/* top spot light */}
       <spotLight
-        args={["#fff", 0.8, 0, Math.PI / 8, 0.4]}
+        args={["#fff", 0.8, 0, Math.PI / 8, 0.25]}
         position={[0, 1, 0]}
         castShadow
       />
@@ -58,7 +58,7 @@ function Three() {
         receiveShadow
       >
         <planeGeometry args={[500, 500]} />
-        <meshStandardMaterial roughness={1} color="#222" />
+        <meshStandardMaterial roughness={1} color="#333" />
       </mesh>
     </>
   );

@@ -6,22 +6,59 @@ source: https://sketchfab.com/3d-models/lamborghini-urus-2650599973b649ddb4460ff
 title: Lamborghini Urus
 */
 
-import React, { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Lambo({ ...props }) {
-  const group = useRef();
+  // const group = useRef();
   const { nodes, materials } = useGLTF(
     "https://electromorphous.github.io/CustomWheels/lambo.glb"
   );
+
+  const [current, setCurrent] = useState("");
+  // const [hovered, setHovered] = useState("");
+
+  const bodyRef = useRef();
+  const wheelRef = useRef();
+
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  useEffect(() => {
+    console.log("current " + current);
+
+    async function glow(part) {
+      for (let i = 0; i < 255; i += 8) {
+        await sleep(0);
+        part.current.material.emissive = {
+          r: i / 255,
+          g: i / 255,
+          b: i / 255,
+        };
+      }
+      for (let i = 255; i >= 0; i -= 8) {
+        await sleep(0);
+        part.current.material.emissive = {
+          r: i / 255,
+          g: i / 255,
+          b: i / 255,
+        };
+      }
+    }
+
+    if (current === "body") {
+      glow(bodyRef);
+    } else if (current === "wheel") {
+      glow(wheelRef);
+    }
+  }, [current]);
+
   return (
     <group
-      ref={group}
-      {...props}
       dispose={null}
-      // onPointerOver={(e) => {
-      //   e.object.material.color.set("#56f725");
-      //   // console.log(e.object);
+      {...props}
+      // onClick={(e) => {
+      //   // e.object.material.color.set("#56f725");
+      //   console.log(e.object.material);
       // }}
 
       // onPointerOut={(e) => e.object.material.color.set("white")}
@@ -29,10 +66,12 @@ export default function Lambo({ ...props }) {
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[0, 2.7, -119]}>
+            {/* back right wheel */}
             <group
               position={[-88.64, -40.87, -16.14]}
               rotation={[-Math.PI, 0, Math.PI]}
               scale={[1.6, 1.51, 1.51]}
+              onClick={() => setCurrent("wheel")}
             >
               <group scale={0.65}>
                 <mesh
@@ -56,6 +95,10 @@ export default function Lambo({ ...props }) {
                 <mesh
                   geometry={nodes.wheel003_020_3_Chrome_0.geometry}
                   material={materials.Chrome}
+                  // material-color={"blue"}
+                  // material-roughness={1}
+                  // material-metalness={0}
+                  ref={wheelRef}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
@@ -81,7 +124,12 @@ export default function Lambo({ ...props }) {
                 material={materials.TiresGum}
               />
             </group>
-            <group position={[88.64, -40.87, -16.14]} scale={[1.6, 1.51, 1.51]}>
+            {/* back left wheel */}
+            <group
+              position={[88.64, -40.87, -16.14]}
+              scale={[1.6, 1.51, 1.51]}
+              onClick={() => setCurrent("wheel")}
+            >
               <group scale={0.65}>
                 <mesh
                   geometry={nodes.Whl_HD_FL_004_2_Universal_Wheel_0.geometry}
@@ -100,6 +148,10 @@ export default function Lambo({ ...props }) {
                 <mesh
                   geometry={nodes.wheel003_020_2_Chrome_0.geometry}
                   material={materials.Chrome}
+                  // material-color={"blue"}
+                  // material-roughness={1}
+                  // material-metalness={0}
+                  ref={wheelRef}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
@@ -125,10 +177,12 @@ export default function Lambo({ ...props }) {
                 material={materials.TiresGum}
               />
             </group>
+            {/* front right wheel */}
             <group
               position={[-88.64, -40.87, 274.96]}
               rotation={[-Math.PI, 0, Math.PI]}
               scale={1.51}
+              onClick={() => setCurrent("wheel")}
             >
               <group scale={0.65}>
                 <mesh
@@ -148,6 +202,10 @@ export default function Lambo({ ...props }) {
                 <mesh
                   geometry={nodes.wheel003_020_1_Chrome_0.geometry}
                   material={materials.Chrome}
+                  // material-color={"blue"}
+                  // material-roughness={1}
+                  // material-metalness={0}
+                  ref={wheelRef}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
@@ -173,7 +231,12 @@ export default function Lambo({ ...props }) {
                 material={materials.TiresGum}
               />
             </group>
-            <group position={[88.64, -40.87, 274.96]} scale={1.51}>
+            {/* front left wheel */}
+            <group
+              position={[88.64, -40.87, 274.96]}
+              scale={1.51}
+              onClick={() => setCurrent("wheel")}
+            >
               <group scale={0.65}>
                 <mesh
                   geometry={nodes.Whl_HD_FL_004_Universal_Wheel_0.geometry}
@@ -194,6 +257,10 @@ export default function Lambo({ ...props }) {
                 <mesh
                   geometry={nodes.wheel003_020_Chrome_0.geometry}
                   material={materials.Chrome}
+                  // material-color={"blue"}
+                  // material-roughness={1}
+                  // material-metalness={0}
+                  ref={wheelRef}
                 />
               </group>
               <group position={[5.39, 0, 0]}>
@@ -232,9 +299,14 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
+                  onClick={() => setCurrent("body")}
                   castShadow
                   geometry={nodes.yellow_WhiteCar_0.geometry}
                   material={materials.WhiteCar}
+                  material-color={"#ffb508"}
+                  material-roughness={1}
+                  material-metalness={0}
+                  ref={bodyRef}
                 />
                 <mesh
                   geometry={nodes.yellow_Logo_0.geometry}
