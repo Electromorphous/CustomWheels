@@ -1,2 +1,8 @@
 @import "config";
 @import "loader";
+
+.picker-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

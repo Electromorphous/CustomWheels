@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Lambo from "./Lambo";
 
 function Model(props) {

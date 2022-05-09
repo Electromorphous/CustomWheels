@@ -1,5 +1,3 @@
-// import { useState, useEffect, useLayoutEffect, useRef } from "react";
-// import { useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "../components/Model";
 import Environment1 from "./Environment1";
