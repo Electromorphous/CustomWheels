@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CustomWheels/static/css/main.1a297d54.css",
+    "main.css": "/CustomWheels/static/css/main.1cc4f82a.css",
     "main.js": "/CustomWheels/static/js/main.aec1e3d3.js",
     "index.html": "/CustomWheels/index.html",
-    "main.1a297d54.css.map": "/CustomWheels/static/css/main.1a297d54.css.map",
+    "main.1cc4f82a.css.map": "/CustomWheels/static/css/main.1cc4f82a.css.map",
     "main.aec1e3d3.js.map": "/CustomWheels/static/js/main.aec1e3d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a297d54.css",
+    "static/css/main.1cc4f82a.css",
     "static/js/main.aec1e3d3.js"
   ]
 }
