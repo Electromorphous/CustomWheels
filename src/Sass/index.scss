@@ -3,6 +3,12 @@
 
 .picker-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 30px;
+  right: 30px;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
 }
