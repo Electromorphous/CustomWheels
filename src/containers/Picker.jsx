@@ -1,14 +1,14 @@
 import React from "react";
-import state from "../utilities/State";
+import { materialState } from "../utilities/States";
 import { HexColorPicker } from "react-colorful";
 import { useSnapshot } from "valtio";
 
 function Picker() {
-  const { current, parts } = useSnapshot(state);
+  const { current, parts } = useSnapshot(materialState);
 
   let curr = "b";
   if (current === "body") curr = "b";
-  else if (current === "wheel") curr = "w";
+  else if (current === "wheels") curr = "w";
 
   return (
     <div
@@ -19,7 +19,7 @@ function Picker() {
       <HexColorPicker
         className="picker"
         color={parts[curr].color}
-        onChange={(color) => (state.parts[curr].color = color)}
+        onChange={(color) => (materialState.parts[curr].color = color)}
       />
       <div className="slider-container">
         <p>Roughness</p>
@@ -29,7 +29,7 @@ function Picker() {
           max={1000}
           value={parts[curr].roughness * 1000}
           onChange={(e) =>
-            (state.parts[curr].roughness = e.target.value / 1000)
+            (materialState.parts[curr].roughness = e.target.value / 1000)
           }
         />
       </div>
@@ -41,7 +41,7 @@ function Picker() {
           max={1000}
           value={parts[curr].metalness * 1000}
           onChange={(e) =>
-            (state.parts[curr].metalness = e.target.value / 1000)
+            (materialState.parts[curr].metalness = e.target.value / 1000)
           }
         />
       </div>

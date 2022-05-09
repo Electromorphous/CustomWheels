@@ -33,33 +33,41 @@
       outline: none;
       border-radius: 10px;
       cursor: pointer;
-      opacity: 0.5;
       transition: all 0.1s ease;
 
       &:hover {
-        opacity: 1;
+        &::-webkit-slider-thumb {
+          width: 19px;
+          height: 19px;
+        }
+        &::-moz-range-thumb {
+          width: 19px;
+          height: 19px;
+        }
       }
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 14px;
-        height: 17px;
+        width: 7px;
+        height: 7px;
         border: 3px solid white;
-        outline: none;
         border-radius: 50px;
+        outline: none;
         background: black;
         cursor: pointer;
+        transition: all 0.2s ease;
       }
 
       &::-moz-range-thumb {
-        width: 14px;
-        height: 14px;
+        width: 7px;
+        height: 7px;
         border: 3px solid white;
-        outline: none;
         border-radius: 50px;
+        outline: none;
         background: black;
         cursor: pointer;
+        transition: all 0.2s ease;
       }
     }
   }

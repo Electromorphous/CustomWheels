@@ -1,6 +1,6 @@
 import { proxy } from "valtio";
 
-const state = proxy({
+export const materialState = proxy({
   current: "",
   parts: {
     b: {
@@ -15,5 +15,3 @@ const state = proxy({
     },
   },
 });
-
-export default state;

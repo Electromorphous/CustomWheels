@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { glow } from "../utilities/general";
-import state from "../utilities/State";
+import { materialState } from "../utilities/States";
 import { useSnapshot } from "valtio";
 
 export default function Lambo({ ...props }) {
@@ -9,7 +9,7 @@ export default function Lambo({ ...props }) {
     "https://electromorphous.github.io/CustomWheels/lambo.glb"
   );
 
-  const { current, parts } = useSnapshot(state);
+  const { current, parts } = useSnapshot(materialState);
 
   const bodyRef = useRef();
   const wheelRef = useRef();
@@ -17,7 +17,7 @@ export default function Lambo({ ...props }) {
   useEffect(() => {
     if (current === "body") {
       glow(bodyRef);
-    } else if (current === "wheel") {
+    } else if (current === "wheels") {
       glow(wheelRef);
     }
   }, [current]);
@@ -26,7 +26,7 @@ export default function Lambo({ ...props }) {
     <group
       dispose={null}
       {...props}
-      onPointerMissed={() => (state.current = "")}
+      onPointerMissed={() => (materialState.current = "")}
       // onClick={(e) => {
       //   // e.object.material.color.set("#56f725");
       //   console.log(e.object.material);
@@ -42,7 +42,7 @@ export default function Lambo({ ...props }) {
               position={[-88.64, -40.87, -16.14]}
               rotation={[-Math.PI, 0, Math.PI]}
               scale={[1.6, 1.51, 1.51]}
-              onClick={() => (state.current = "wheel")}
+              onClick={() => (materialState.current = "wheels")}
             >
               <group scale={0.65}>
                 <mesh
@@ -99,7 +99,7 @@ export default function Lambo({ ...props }) {
             <group
               position={[88.64, -40.87, -16.14]}
               scale={[1.6, 1.51, 1.51]}
-              onClick={() => (state.current = "wheel")}
+              onClick={() => (materialState.current = "wheels")}
             >
               <group scale={0.65}>
                 <mesh
@@ -153,7 +153,7 @@ export default function Lambo({ ...props }) {
               position={[-88.64, -40.87, 274.96]}
               rotation={[-Math.PI, 0, Math.PI]}
               scale={1.51}
-              onClick={() => (state.current = "wheel")}
+              onClick={() => (materialState.current = "wheels")}
             >
               <group scale={0.65}>
                 <mesh
@@ -206,7 +206,7 @@ export default function Lambo({ ...props }) {
             <group
               position={[88.64, -40.87, 274.96]}
               scale={1.51}
-              onClick={() => (state.current = "wheel")}
+              onClick={() => (materialState.current = "wheels")}
             >
               <group scale={0.65}>
                 <mesh
@@ -270,7 +270,7 @@ export default function Lambo({ ...props }) {
                 scale={2.75}
               >
                 <mesh
-                  onClick={() => (state.current = "body")}
+                  onClick={() => (materialState.current = "body")}
                   castShadow
                   geometry={nodes.yellow_WhiteCar_0.geometry}
                   material={materials.WhiteCar}
