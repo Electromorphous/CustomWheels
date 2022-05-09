@@ -9,7 +9,7 @@ export default function App() {
       <Canvas
         style={{ height: "100%" }}
         shadows
-        camera={{ fov: 31, position: [0.7, 0.2, 1] }}
+        camera={{ fov: 31, position: [0.4, 0, 0.7] }}
         resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
       >
         <Three />

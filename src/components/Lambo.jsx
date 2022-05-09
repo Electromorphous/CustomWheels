@@ -274,7 +274,7 @@ export default function Lambo({ ...props }) {
                   geometry={nodes.yellow_WhiteCar_0.geometry}
                   material={materials.WhiteCar}
                   material-color={"#ffb508"}
-                  material-roughness={1}
+                  material-roughness={0.5}
                   material-metalness={0}
                   ref={bodyRef}
                 />

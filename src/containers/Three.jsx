@@ -24,13 +24,14 @@ function Three() {
         target={[0, 0.05, 0]}
         minPolarAngle={Math.PI / 8}
         maxPolarAngle={Math.PI / 2.2}
-        maxDistance={0.9}
+        maxDistance={1}
         minDistance={0.45}
         enablePan={false}
         rotateSpeed={0.69}
       />
 
-      <ambientLight intensity={0.2} />
+      {/* <ambientLight intensity={0.2} /> */}
+
       {/* top spot light */}
       <spotLight
         args={["#fff", 0.8, 0, Math.PI / 8, 0.25]}
@@ -39,13 +40,19 @@ function Three() {
       />
       {/* side lights */}
       <spotLight
-        args={["#fff", 0.3, 0, Math.PI / 8, 0.4]}
+        args={["#fff", 0.2, 0, Math.PI / 8, 0.4]}
         position={[5, 0, 0]}
         castShadow
       />
       <spotLight
-        args={["#fff", 0.3, 0, Math.PI / 8, 0.4]}
+        args={["#fff", 0.2, 0, Math.PI / 8, 0.4]}
         position={[-5, 0, 0]}
+        castShadow
+      />
+      {/* back lights */}
+      <spotLight
+        args={["#fff", 0.2, 0, Math.PI / 8, 0.4]}
+        position={[0, 0, -5]}
         castShadow
       />
 
