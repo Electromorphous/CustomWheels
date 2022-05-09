@@ -21,6 +21,30 @@ function Picker() {
         color={parts[curr].color}
         onChange={(color) => (state.parts[curr].color = color)}
       />
+      <div className="slider-container">
+        <p>Roughness</p>
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          value={parts[curr].roughness * 1000}
+          onChange={(e) =>
+            (state.parts[curr].roughness = e.target.value / 1000)
+          }
+        />
+      </div>
+      <div className="slider-container">
+        <p>Metalness</p>
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          value={parts[curr].metalness * 1000}
+          onChange={(e) =>
+            (state.parts[curr].metalness = e.target.value / 1000)
+          }
+        />
+      </div>
     </div>
   );
 }

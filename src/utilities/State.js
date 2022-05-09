@@ -5,7 +5,7 @@ const state = proxy({
   parts: {
     b: {
       color: "#ffb508",
-      roughness: 0.2,
+      roughness: 0.5,
       metalness: 0,
     },
     w: {
