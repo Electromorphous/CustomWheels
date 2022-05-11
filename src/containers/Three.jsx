@@ -54,7 +54,7 @@ function Three() {
         castShadow
       />
 
-      <Model scale={0.001} position={[0, 0.08, 0]} castShadow receiveShadow />
+      <Model position={[0, 0.08, 0]} castShadow receiveShadow />
 
       <mesh
         rotation={[-Math.PI / 2, 0, 0]}
