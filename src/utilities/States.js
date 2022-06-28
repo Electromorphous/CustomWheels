@@ -15,3 +15,7 @@ export const materialState = proxy({
     },
   },
 });
+
+export const carState = proxy({
+  currentCar: 0,
+});

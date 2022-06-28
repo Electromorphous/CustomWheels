@@ -1,5 +1,5 @@
 import { OrbitControls } from "@react-three/drei";
-import Model from "../components/Model";
+import Model from "./Model";
 import Environment1 from "./Environment1";
 
 function Three() {

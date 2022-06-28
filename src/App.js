@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "./components/Loader";
 import Three from "./containers/Three";
-import Picker from "./containers/Picker";
+import Picker from "./components/Picker";
 
 export default function App() {
   return (
