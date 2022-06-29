@@ -1,10 +1,19 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import Loader from "./components/Loader";
 import Three from "./containers/Three";
-import Picker from "./components/Picker";
+import Loader from "./UI/Loader";
+import Picker from "./UI/Picker";
+import CustomSelect from "./UI/CustomSelect";
+import { carState } from "./utilities/States";
+import { useSnapshot } from "valtio";
 
 export default function App() {
+  const { currentCar } = useSnapshot(carState);
+
+  const handleCarChange = (e) => {
+    carState.currentCar = e.target.value;
+  };
+
   return (
     <Suspense fallback={<Loader />}>
       <Canvas
@@ -16,6 +25,15 @@ export default function App() {
         <Three />
       </Canvas>
       <Picker />
+      <CustomSelect
+        value={currentCar}
+        handleChange={handleCarChange}
+        label="Car"
+        options={[
+          { value: 0, name: "Lamborghini" },
+          { value: 1, name: "Porche" },
+        ]}
+      />
     </Suspense>
   );
 }

@@ -1,6 +1,6 @@
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model";
-import Environment1 from "./Environment1";
+import Environment1 from "../components/Environment1";
 
 function Three() {
   //   const ref = useRef(null);
