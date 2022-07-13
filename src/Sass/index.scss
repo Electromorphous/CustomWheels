@@ -73,12 +73,20 @@
   }
 }
 
-.MuiList-root {
-  background-color: black;
+.MuiPaper-root {
+  background-color: transparent !important;
+  .MuiList-root {
+    .MuiMenuItem-root {
+      background: black;
+      border-radius: 5px;
+      border: none;
+      margin: 1px 0;
 
-  .MuiMenuItem-root {
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 1px 0;
+      &.Mui-selected {
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+      }
+    }
   }
 }
